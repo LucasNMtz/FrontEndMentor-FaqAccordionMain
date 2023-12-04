@@ -1,0 +1,172 @@
+:root{
+    --white: hsl(0, 0%, 100%);
+    --light-pink: hsl(275, 100%, 97%);
+    --grayish-purple: hsl(292, 16%, 49%);
+    --dark-purple: hsl(292, 42%, 14%);
+}
+
+@font-face 
+{
+    font-family: 'WorkSansRegular';
+    src: url('assets/fonts/static/WorkSans-Regular.ttf') format('ttf');
+    font-weight: 400;
+}
+@font-face 
+{
+    font-family: 'WorkSansSemiBold';
+    src: url('assets/fonts/static/WorkSans-SemiBold.ttf') format('ttf');
+    font-weight: 600;
+}
+@font-face 
+{
+    font-family: 'WorkSansBold';
+    src: url('assets/fonts/static/WorkSans-Bold.ttf') format('ttf');
+    font-weight: 700;
+}
+  
+*
+{
+    font-size: 16px;
+}
+
+body
+{
+    min-height: 100vh;
+    background-color: var(--light-pink);
+    background-image: url(assets/images/background-pattern-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: center top;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 325px;
+}
+
+h1{
+    font-family: 'WorkSansBold', sans-serif;
+    margin: 0;
+    padding-left: 22px;
+    font-size: 1.9rem;
+}
+
+h2{
+    font-family: 'WorkSansSemiBold', sans-serif;
+    font-size: 0.9rem;
+    min-width: 185px;
+    padding-right: 20px;
+}
+
+h1, h2{
+    color: var(--dark-purple);
+}
+
+p{
+    font-family: 'WorkSansRegular', sans-serif;
+    color: var(--grayish-purple);
+    font-size: 0.8rem;
+    line-height: 1.5;
+    min-width: 225px;
+    max-width: 425px;
+}
+
+main{
+    flex-grow: 1;
+    padding: 0 20px;
+    padding-top: 150px;
+}
+
+article{
+    background-color: var(--white);
+    min-width: 305px;
+    max-width: 565px;
+    margin: 0 auto;
+    border-radius: 10px;
+    padding: 25px;
+}
+
+.main-article__div-title-container
+{
+    display: flex;
+    align-items: center;
+    padding-bottom: 22px;
+}
+
+.main-article__div-title-container img
+{
+    min-width: 22px;
+    min-height: 22px;
+}
+
+section
+{
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.section-div__div-title-container
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 27px;
+    cursor: pointer;
+}
+
+.section-div__div-title-container:hover > h2{
+    color: hsl(281, 83%, 54%);
+}
+
+.section__div-faqs-container
+{
+    padding-bottom: 22px;
+    border-bottom: 2px solid hsl(275, 100%, 97%);
+    overflow: hidden;
+    max-height: 58px;
+    transition: max-height 0.5s ease-out;
+}
+
+section .section__div-faqs-container:last-child
+{
+    border: none;
+    padding-bottom: 0;
+}
+
+footer{
+    padding-top: 105px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+@media only screen and (min-width: 376px)
+{
+    body
+    {
+        background-image: url(assets/images/background-pattern-desktop.svg);
+    }
+}
+
+@media only screen and (min-width: 1000px){
+
+    main{
+        padding-top: 175px;
+    }
+
+    article{
+        padding: 40px;
+    }
+
+    h1
+    {
+        font-size: 3rem;
+    }
+
+    h2{
+        font-size: 1rem;
+    }
+
+    p{
+        font-size: 0.9rem;
+    }
+}
